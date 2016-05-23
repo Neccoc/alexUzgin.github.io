@@ -38,6 +38,10 @@
 .blog-header h2 a {}
 #wsite-content h2.wsite-product-title {}
 .wsite-product .wsite-product-price a {}
+#map {
+        width: 500px;
+        height: 400px;
+}
 </style>
 <style>
 .wsite-background {background-image: url("//cdn1.editmysite.com/uploads/7/8/3/9/783963/background-images/1057951489.jpg") !important;background-repeat: no-repeat !important;background-position: 50.00% 10.64% !important;background-size: 100% !important;background-color: transparent !important;}
@@ -75,6 +79,18 @@ var STYLE_PREFIX = 'wsite';
 		}
 	})(window._W && _W.jQuery)
 //-->
+</script>
+<script>
+      function initMap() {
+        var mapDiv = document.getElementById('map');
+        var map = new google.maps.Map(mapDiv, {
+          center: {lat: 44.540, lng: -78.546},
+          zoom: 8
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap"
+        async defer>
 </script>
 		
 	</head>
@@ -207,7 +223,7 @@ var STYLE_PREFIX = 'wsite';
 
 <div class="paragraph" style="text-align:left;"><font size="4">Our studio is located at</font><br /><span>3 Commercial Avenue</span><br /><span>Highland NY, 12528<br />&#8203;</span></div>
 
-<div class="wsite-map"><iframe allowtransparency="true" frameborder="0" scrolling="no" style="width: 100%; height: 250px; margin-top: 0px; margin-bottom: 0px;" src="http://www.weebly.com/weebly/apps/generateMap.php?map=google&elementid=520432861753079&ineditor=0&control=3&width=500px&height=250px&overviewmap=0&scalecontrol=1&typecontrol=0&zoom=15&long=-73.96705250000002&lat=41.7188009&domain=www&point=1&align=3&reseller=false"></iframe></div>
+<div id="map"></div>
 
 <div class="paragraph" style="text-align:left;"><span><font size="4">By &#8203;Appointment Only</font></span></div>
 
